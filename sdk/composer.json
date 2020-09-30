@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ttvcloud/vcloud-sdk-php": "^0.0"
+    }
+}
