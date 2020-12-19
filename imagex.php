@@ -3,7 +3,7 @@
 Plugin Name: ImageX
 Plugin URI: https://github.com/sy-records/volcengine-imagex-wordpress
 Description: 使用火山引擎图片服务（ImageX）作为附件存储空间。（This is a plugin that uses VolcEngine ImageX for attachments remote saving.）
-Version: 1.0.0
+Version: 1.0.1
 Author: 沈唁
 Author URI: https://qq52o.me
 License: Apache 2.0
@@ -13,7 +13,7 @@ require_once 'sdk/vendor/autoload.php';
 
 use Vcloud\Service\ImageX;
 
-define('IMAGEX_VERSION', '1.0.0');
+define('IMAGEX_VERSION', '1.0.1');
 define('IMAGEX_BASEFOLDER', plugin_basename(dirname(__FILE__)));
 
 register_activation_hook(__FILE__, 'imagex_set_options');
@@ -271,8 +271,8 @@ function imagex_delete_remote_attachment($post_id)
 
         $deleteObjects[] = $uri_prefix . '/' . str_replace("\\", '/', $file_path);
 
-        $is_nothumb = (esc_attr($imagex_options['nothumb']) == 'false');
-        if ($is_nothumb) {
+//        $is_nothumb = (esc_attr($imagex_options['nothumb']) == 'false');
+//        if ($is_nothumb) {
             // 删除缩略图
             if (isset($meta['sizes']) && count($meta['sizes']) > 0) {
                 foreach ($meta['sizes'] as $val) {
@@ -281,7 +281,7 @@ function imagex_delete_remote_attachment($post_id)
                     $deleteObjects[] = $uri_prefix . '/' . str_replace("\\", '/', $size_file);
                 }
             }
-        }
+//        }
         imagex_delete_files($deleteObjects);
     }
 }

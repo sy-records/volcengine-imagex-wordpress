@@ -3,9 +3,9 @@ Contributors: shenyanzhi
 Donate link: https://qq52o.me/sponsor.html
 Tags: imagex, byteoc, volcengine, 火山引擎, 字节跳动
 Requires at least: 4.2
-Tested up to: 5.5
+Tested up to: 5.6
 Requires PHP: 5.6.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: Apache 2.0
 License URI: http://www.apache.org/licenses/LICENSE-2.0.html
 
@@ -46,5 +46,9 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0.html
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.1 =
+* 支持WordPress 5.6
+* 优化缩略图删除逻辑
+
+= 1.0.0 =
 * First version
