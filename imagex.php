@@ -3,7 +3,7 @@
 Plugin Name: ImageX
 Plugin URI: https://github.com/sy-records/volcengine-imagex-wordpress
 Description: 使用火山引擎图片服务（ImageX）作为附件存储空间。（This is a plugin that uses VolcEngine ImageX for attachments remote saving.）
-Version: 1.0.1
+Version: 1.0.2
 Author: 沈唁
 Author URI: https://qq52o.me
 License: Apache 2.0
@@ -11,9 +11,9 @@ License: Apache 2.0
 
 require_once 'sdk/vendor/autoload.php';
 
-use Vcloud\Service\ImageX;
+use Volc\Service\ImageX;
 
-define('IMAGEX_VERSION', '1.0.1');
+define('IMAGEX_VERSION', '1.0.2');
 define('IMAGEX_BASEFOLDER', plugin_basename(dirname(__FILE__)));
 
 register_activation_hook(__FILE__, 'imagex_set_options');
@@ -32,6 +32,9 @@ function imagex_set_options()
     add_option('imagex_options', $options, '', 'yes');
 }
 
+/**
+ * @return mixed|ImageX
+ */
 function imagex_get_client()
 {
     $imagex_option = get_option('imagex_options', true);
@@ -500,7 +503,7 @@ function imagex_setting_page()
                     <td>
                         <input type="text" name="service_id" value="<?php echo $imagex_service_id; ?>" size="50" placeholder="请填写服务ID"/>
 
-                        <p>请先访问 <a href="https://console.byteoc.com/imagex/service_manage/" target="_blank">图片服务管理</a> 新建服务，再填写以上内容。</p>
+                        <p>请先访问 <a href="https://console.volcengine.cn/imagex/overview/" target="_blank">图片服务管理</a> 新建服务，再填写以上内容。</p>
                     </td>
                 </tr>
                 <tr>
@@ -523,7 +526,7 @@ function imagex_setting_page()
                     <td>
                         <input type="text" name="access_key" value="<?php echo $imagex_access_key; ?>" size="50" placeholder="AccessKey ID"/>
 
-                        <p>请先访问 <a href="https://console.byteoc.com/iam/keymanage/" target="_blank">密钥管理</a> 获取 <code>AccessKey ID、AccessKey Secret</code></p>
+                        <p>请先访问 <a href="https://console.volcengine.cn/iam/keymanage/" target="_blank">密钥管理</a> 获取 <code>AccessKey ID、AccessKey Secret</code></p>
                     </td>
                 </tr>
                 <tr>
@@ -585,7 +588,7 @@ function imagex_setting_page()
 
                         <p><b>获取模板：</b></p>
 
-                        <p>1）在 <a href="https://console.byteoc.com/imagex/image_template/" target="_blank">图片处理配置</a> 中新建模板。</p>
+                        <p>1）在 <a href="https://console.volcengine.cn/imagex/image_template/" target="_blank">图片处理配置</a> 中新建模板。</p>
 
                         <p>2）将<code>模板配置</code>填写到此处。</p>
                     </td>
