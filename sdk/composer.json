@@ -1,5 +1,5 @@
 {
     "require": {
-        "ttvcloud/vcloud-sdk-php": "^0.0"
+        "volcengine/volc-sdk-php": "dev-main"
     }
 }
