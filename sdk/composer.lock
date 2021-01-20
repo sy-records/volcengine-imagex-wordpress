@@ -947,12 +947,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/volcengine/volc-sdk-php.git",
-                "reference": "269bfedbc5291479c73d6a8892a385366ca94d81"
+                "reference": "a3d4e52e8864c33d451a60d4efd66f3b61201c3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/volcengine/volc-sdk-php/zipball/269bfedbc5291479c73d6a8892a385366ca94d81",
-                "reference": "269bfedbc5291479c73d6a8892a385366ca94d81",
+                "url": "https://api.github.com/repos/volcengine/volc-sdk-php/zipball/a3d4e52e8864c33d451a60d4efd66f3b61201c3e",
+                "reference": "a3d4e52e8864c33d451a60d4efd66f3b61201c3e",
                 "shasum": ""
             },
             "require": {
@@ -983,7 +983,7 @@
                 "issues": "https://github.com/volcengine/volc-sdk-php/issues",
                 "source": "https://github.com/volcengine/volc-sdk-php/tree/main"
             },
-            "time": "2020-12-31T09:36:25+00:00"
+            "time": "2021-01-20T06:19:14+00:00"
         }
     ],
     "packages-dev": [],
