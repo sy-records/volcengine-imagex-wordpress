@@ -46,7 +46,7 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0.html
 
 == Frequently Asked Questions ==
 
-= 开启插件并上传图片，在媒体库中不能正常访问，但在文章中显示正常 =
+= 开启插件并上传图片，在后台媒体库和文章中不能正常访问，但在前台显示正常 =
 
 请前往火山引擎官网 [创建工单](https://console.volcengine.cn/ticket/createTicket/?step=3&ProviderName=%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88&TemplateName=%E5%8A%9F%E8%83%BD%E9%85%8D%E7%BD%AE) ，问题描述里填写：`WordPress插件开通源地址访问功能`
 
