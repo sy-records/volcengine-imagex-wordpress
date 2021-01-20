@@ -5,7 +5,7 @@ Tags: imagex, byteoc, volcengine, 火山引擎, 字节跳动
 Requires at least: 4.2
 Tested up to: 5.6
 Requires PHP: 5.6.0
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: Apache 2.0
 License URI: http://www.apache.org/licenses/LICENSE-2.0.html
 
@@ -51,6 +51,9 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0.html
 请前往火山引擎官网 [创建工单](https://console.volcengine.cn/ticket/createTicket/?step=3&ProviderName=%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88&TemplateName=%E5%8A%9F%E8%83%BD%E9%85%8D%E7%BD%AE) ，问题描述里填写：`WordPress插件开通源地址访问功能`
 
 == Changelog ==
+
+= 1.0.4 =
+* 修复在文章中从媒体库添加图片携带了图片处理模板
 
 = 1.0.3 =
 * 修复丢失火山引擎SDK
