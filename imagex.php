@@ -3,7 +3,7 @@
 Plugin Name: ImageX
 Plugin URI: https://github.com/sy-records/volcengine-imagex-wordpress
 Description: 使用火山引擎图片服务（ImageX）作为附件存储空间。（This is a plugin that uses VolcEngine ImageX for attachments remote saving.）
-Version: 1.0.2
+Version: 1.0.3
 Author: 沈唁
 Author URI: https://qq52o.me
 License: Apache 2.0
