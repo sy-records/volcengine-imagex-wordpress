@@ -1,6 +1,8 @@
 # ImageX
 
-使用火山引擎图片服务（ImageX）作为附件存储空间的 WordPress 插件
+使用火山引擎图片服务（[ImageX](https://zjsms.com/RVvQxX8/)）作为附件存储空间的 WordPress 插件
+
+> 推荐在开通`ImageX`时填写专属邀请码：`JTXSFT`
 
 [![Latest Version](https://img.shields.io/github/release/sy-records/volcengine-imagex-wordpress.svg)](https://github.com/sy-records/volcengine-imagex-wordpress/releases)
 [![License](https://img.shields.io/github/license/sy-records/volcengine-imagex-wordpress?color=red)](LICENSE)
