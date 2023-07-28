@@ -3,7 +3,7 @@ Contributors: shenyanzhi
 Donate link: https://qq52o.me/sponsor.html
 Tags: imagex, byteoc, volcengine, 火山引擎, 字节跳动
 Requires at least: 4.2
-Tested up to: 5.6
+Tested up to: 6.3
 Requires PHP: 5.6.0
 Stable tag: 1.0.4
 License: Apache 2.0
