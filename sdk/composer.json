@@ -1,5 +1,5 @@
 {
     "require": {
-        "volcengine/volc-sdk-php": "dev-main"
+        "volcengine/volc-sdk-php": "^1.0"
     }
 }
