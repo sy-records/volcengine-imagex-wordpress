@@ -305,8 +305,8 @@ if (get_option('upload_path') == '.') {
 
 function imagex_sanitize_file_name($filename)
 {
-    $cos_options = get_option('cos_options');
-    switch ($cos_options['update_file_name']) {
+    $imagex_options = get_option('imagex_options');
+    switch ($imagex_options['update_file_name']) {
         case 'md5':
             return  md5($filename) . '.' . pathinfo($filename, PATHINFO_EXTENSION);
         case 'time':
