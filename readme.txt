@@ -25,6 +25,7 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0.html
 4. 支持完整地域使用
 5. 支持同步历史附件到火山引擎图片服务 ImageX
 6. 支持火山引擎图片服务 ImageX 图片处理
+7. 支持自动重命名文件
 
 插件更多详细介绍和安装：[https://github.com/sy-records/volcengine-imagex-wordpress](https://github.com/sy-records/volcengine-imagex-wordpress)
 
@@ -55,6 +56,7 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0.html
 = 1.1.0 =
 * 升级依赖
 * 支持 WordPress 6.3 版本
+* 支持自动重命名文件
 
 = 1.0.4 =
 * 修复在文章中从媒体库添加图片携带了图片处理模板

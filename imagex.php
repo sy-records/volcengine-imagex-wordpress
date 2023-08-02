@@ -28,6 +28,7 @@ function imagex_set_options()
         'nolocalsaving' => 'false', // 是否保留本地备份
         'upload_url_path' => '', // URL前缀
         'image_template' => '', // 图片处理模板
+        'update_file_name' => 'false', // 是否重命名文件名
     );
     add_option('imagex_options', $options, '', 'yes');
 }
@@ -302,6 +303,20 @@ if (get_option('upload_path') == '.') {
     add_filter('wp_get_attachment_url', 'imagex_modefiy_img_url', 30, 2);
 }
 
+function imagex_sanitize_file_name($filename)
+{
+    $cos_options = get_option('cos_options');
+    switch ($cos_options['update_file_name']) {
+        case 'md5':
+            return  md5($filename) . '.' . pathinfo($filename, PATHINFO_EXTENSION);
+        case 'time':
+            return date('YmdHis', current_time('timestamp'))  . mt_rand(100, 999) . '.' . pathinfo($filename, PATHINFO_EXTENSION);
+        default:
+            return $filename;
+    }
+}
+add_filter( 'sanitize_file_name', 'imagex_sanitize_file_name', 10, 1 );
+
 function imagex_function_each(&$array)
 {
     $res = array();
@@ -419,6 +434,7 @@ function imagex_setting_page()
         $options['nolocalsaving'] = isset($_POST['nolocalsaving']) ? 'true' : 'false';
         $options['upload_url_path'] = isset($_POST['upload_url_path']) ? sanitize_text_field(stripslashes($_POST['upload_url_path'])) : '';
         $options['image_template'] = isset($_POST['image_template']) ? sanitize_text_field($_POST['image_template']) : '';
+        $options['update_file_name'] = isset($_POST['update_file_name']) ? sanitize_text_field($_POST['update_file_name']) : 'false';
     }
 
     if (!empty($_POST) and $_POST['type'] == 'imagex_all') {
@@ -476,6 +492,8 @@ function imagex_setting_page()
 
     $imagex_nolocalsaving = esc_attr($imagex_options['nolocalsaving']);
     $imagex_nolocalsaving = ($imagex_nolocalsaving == 'true');
+
+    $imagex_update_file_name = esc_attr($imagex_options['update_file_name']);
 
     $imagex_image_template = esc_attr($imagex_options['image_template']);
 
@@ -568,6 +586,18 @@ function imagex_setting_page()
                         <p><b>注意：</b></p>
 
                         <p>URL前缀的格式为 <code><?php echo $protocol;?>{已绑定域名}/{本地文件夹}</code> ，“本地文件夹”务必与上面保持一致（结尾无 <code>/</code> ），或者“本地文件夹”为 <code>.</code> 时 <code><?php echo $protocol;?>{已绑定域名}</code> 。</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <legend>自动重命名文件</legend>
+                    </th>
+                    <td>
+                        <select name="update_file_name">
+                            <option <?php if ($imagex_update_file_name == 'false') {echo 'selected="selected"';} ?> value="false">不处理</option>
+                            <option <?php if ($imagex_update_file_name == 'md5') {echo 'selected="selected"';} ?> value="md5">MD5</option>
+                            <option <?php if ($imagex_update_file_name == 'time') {echo 'selected="selected"';} ?> value="time">时间戳+随机数</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
