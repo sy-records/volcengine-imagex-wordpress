@@ -1,5 +1,10 @@
 {
     "require": {
         "volcengine/volc-sdk-php": "^1.0"
+    },
+    "scripts": {
+        "pre-autoload-dump": [
+            "php cleanup.php"
+        ]
     }
 }

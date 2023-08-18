@@ -371,7 +371,7 @@ function imagex_read_dir_queue($dir)
 // 在插件列表页添加设置按钮
 function imagex_plugin_action_links($links, $file)
 {
-    if ($file == plugin_basename(dirname(__FILE__) . '/imagex.php')) {
+    if ($file == IMAGEX_BASEFOLDER . '/imagex.php') {
         $links[] = '<a href="options-general.php?page=' . IMAGEX_BASEFOLDER . '/imagex.php">设置</a>';
     }
     return $links;
