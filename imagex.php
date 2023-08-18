@@ -3,7 +3,7 @@
 Plugin Name: ImageX
 Plugin URI: https://github.com/sy-records/volcengine-imagex-wordpress
 Description: 使用火山引擎图片服务（ImageX）作为附件存储空间。（This is a plugin that uses VolcEngine ImageX for attachments remote saving.）
-Version: 1.1.0
+Version: 1.1.1
 Author: 沈唁
 Author URI: https://qq52o.me
 License: Apache 2.0
@@ -13,7 +13,7 @@ require_once 'sdk/vendor/autoload.php';
 
 use Volc\Service\ImageX;
 
-define('IMAGEX_VERSION', '1.1.0');
+define('IMAGEX_VERSION', '1.1.1');
 define('IMAGEX_BASEFOLDER', plugin_basename(dirname(__FILE__)));
 
 register_activation_hook(__FILE__, 'imagex_set_options');
@@ -371,7 +371,7 @@ function imagex_read_dir_queue($dir)
 // 在插件列表页添加设置按钮
 function imagex_plugin_action_links($links, $file)
 {
-    if ($file == plugin_basename(dirname(__FILE__) . '/imagex.php')) {
+    if ($file == IMAGEX_BASEFOLDER . '/imagex.php') {
         $links[] = '<a href="options-general.php?page=' . IMAGEX_BASEFOLDER . '/imagex.php">设置</a>';
     }
     return $links;
@@ -503,7 +503,7 @@ function imagex_setting_page()
         <h1>火山引擎 ImageX 设置 <span style="font-size: 13px;">当前版本：<?php echo IMAGEX_VERSION; ?></span></h1>
         <p>如果觉得此插件对你有所帮助，不妨到 <a href="https://github.com/sy-records/volcengine-imagex-wordpress" target="_blank">GitHub</a> 上点个<code>Star</code>，<code>Watch</code>关注更新；</p>
         <hr/>
-        <form name="form1" method="post" action="<?php echo wp_nonce_url('./options-general.php?page=' . IMAGEX_BASEFOLDER . '/imagex.php'); ?>">
+        <form name="form" method="post">
             <table class="form-table">
                 <tr>
                     <th>
@@ -621,7 +621,7 @@ function imagex_setting_page()
             </table>
             <input type="hidden" name="type" value="imagex_set">
         </form>
-        <form name="form2" method="post" action="<?php echo wp_nonce_url('./options-general.php?page=' . IMAGEX_BASEFOLDER . '/imagex.php'); ?>">
+        <form name="form" method="post">
             <table class="form-table">
                 <tr>
                     <th>
@@ -636,7 +636,7 @@ function imagex_setting_page()
             </table>
         </form>
         <hr>
-        <form name="form3" method="post" action="<?php echo wp_nonce_url('./options-general.php?page=' . IMAGEX_BASEFOLDER . '/imagex.php'); ?>">
+        <form name="form" method="post">
             <table class="form-table">
                 <tr>
                     <th>
