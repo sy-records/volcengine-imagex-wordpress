@@ -1,6 +1,7 @@
 <?php
 
 $paths = [
+    'vendor/volcengine/volc-sdk-php/src/Service/Base/Models',
     'vendor/volcengine/volc-sdk-php/src/Service/Imp',
     'vendor/volcengine/volc-sdk-php/src/Service/Live',
     'vendor/volcengine/volc-sdk-php/src/Service/Vms',

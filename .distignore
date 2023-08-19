@@ -7,4 +7,6 @@
 /.git
 /.distignore
 /sdk/composer.lock
-/sdk/cleanup.php
+/sdk/vendor/grpc/grpc
+/sdk/vendor/google
+/sdk/vendor/firebase
