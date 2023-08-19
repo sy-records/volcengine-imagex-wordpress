@@ -7,4 +7,3 @@
 /.git
 /.distignore
 /sdk/composer.lock
-/sdk/cleanup.php

@@ -1,10 +1,14 @@
 {
-    "require": {
-        "volcengine/volc-sdk-php": "^1.0"
-    },
-    "scripts": {
-        "pre-autoload-dump": [
-            "php cleanup.php"
-        ]
-    }
+  "require": {
+    "volcengine/volc-sdk-php": "^1.0"
+  },
+  "scripts": {
+    "pre-autoload-dump": [
+      "php cleanup.php"
+    ]
+  },
+  "replace": {
+    "google/protobuf": "*",
+    "google/gax": "*"
+  }
 }
