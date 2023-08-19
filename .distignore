@@ -10,3 +10,4 @@
 /sdk/vendor/grpc/grpc
 /sdk/vendor/google
 /sdk/vendor/firebase
+sdk/vendor/volcengine/volc-sdk-php/src/Service/Base
