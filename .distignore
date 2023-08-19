@@ -7,3 +7,5 @@
 /.git
 /.distignore
 /sdk/composer.lock
+/sdk/vendor/grpc/grpc
+/sdk/vendor/google
