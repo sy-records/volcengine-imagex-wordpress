@@ -19,7 +19,7 @@
 * [x] 支持完整地域使用
 * [x] 支持同步历史附件到火山引擎图片服务 ImageX
 * [x] 支持火山引擎图片服务 ImageX 图片处理
-* [x] 支持后台媒体库列表缩略图显示 (请提交工单开通**源地址访问**功能)
+* [x] 支持后台媒体库列表缩略图显示
 
 ## 安装
 
@@ -40,7 +40,7 @@ GitHub 下载节点：[https://github.com/sy-records/volcengine-imagex-wordpress
 
 ## 插件截图
 
-![设置页面](screenshot-1.png)
+![设置页面](.wordpress-org/screenshot-1.png)
 
 ## 常见问题
 
